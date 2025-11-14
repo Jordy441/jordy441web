@@ -1,17 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>A Chronicle of Comber</title>
+  <meta charset="utf-8">
+  <title>Comber County Down Northern Ireland</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="We help companies deliver reliable products and services across engineering and cloud.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0f172a; --fg:#ffffff; --muted:#cbd5e1; --accent:#ef4444; --card:#111827; }
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6}
+    a{color:var(--fg);text-decoration:none} a.btn{background:var(--accent);color:#fff;padding:.75rem 1rem;border-radius:.5rem;font-weight:600;display:inline-block}
+    header{max-width:1100px;margin:0 auto;padding:24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-weight:700;letter-spacing:.5px}
+    nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0}
+    .hero{max-width:1100px;margin:0 auto;padding:72px 24px;display:grid;grid-template-columns:1.2fr 1fr;gap:32px}
+    .hero h1{font-size:clamp(2rem,4vw,3rem);margin:0 0 12px} .hero p{color:var(--muted);margin:0 0 20px}
+    .card{background:var(--card);border:1px solid #1f2937;border-radius:12px;padding:20px}
+    .grid{max-width:1100px;margin:0 auto;padding:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+    .section{max-width:1100px;margin:0 auto;padding:48px 24px}
+    footer{border-top:1px solid #1f2937;margin-top:32px} .foot{max-width:1100px;margin:0 auto;padding:24px;color:var(--muted);font-size:.9rem}
+  </style>
 </head>
-
 <body>
-  <main>
-    <h1>Comber County Down Northern Ireland</h1>
-  </main>
-</body>
+  <header>
+    <div class="logo">Your Company</div>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a class="btn" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <section class="hero">
+    <div>
+      <h1>Engineering and cloud solutions that scale.</h1>
+      <p>We partner with teams to design, build, and operate reliable systems — from mechanical design to Azure cloud.</p>
+      <a class="btn" href="#contact">Start a project</a>
+    </div>
+    <div class="card">
+      <h3>Trusted by teams</h3>
+      <p class="muted">Financial services, manufacturing, and motorsport organizations rely on our delivery.</p>
+      <ul>
+        <li>Process design and optimization</li>
+        <li>Azure migration and administration</li>
+        <li>Technical training and mentoring</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="services" class="section">
+    <h2>Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Cloud & Azure</h3>
+        <p>Landing zones, identity, observability, and cost control. Practical setups that teams can run.</p>
+      </div>
+      <div class="card">
+        <h3>Engineering</h3>
+        <p>Design, simulation (CFD), and documentation with robust change control.</p>
+      </div>
+      <div class="card">
+        <h3>Enablement</h3>
+        <p>Mentoring, process tuning, and hands-on workshops tailored to your stack.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="section">
+    <h2>Selected work</h2>
+    <div class="grid">
+      <div class="card"><h4>Motorsport</h4><p>Intake design and performance modeling for race applications.</p></div>
+      <div class="card"><h4>Financial services</h4><p>Streamlined admin workflows and secure client data handling.</p></div>
+      <div class="card"><h4>Education</h4><p>Course design and mentoring for new cloud practitioners.</p></div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About</h2>
+    <p>We are a multidisciplinary team with experience across engineering, administration, teaching, and cloud computing. We prioritize clear communication and dependable delivery.</p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:hello@yourcompany.com">hello@yourcompany.com</a></p>
+    <p>LinkedIn: <a href="#" target="_blank">Company profile</a></p>
+  </section>
+
+  <footer>
+    <div class="foot">© <span id="y"></span> Your Company. All rights reserved.</div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
 </html>
