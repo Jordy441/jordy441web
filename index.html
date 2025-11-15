@@ -2,129 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Buzzin Hornets Motorsport</title>
+  <title>Motorsport Consulting Co.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: "Segoe UI", Arial, sans-serif; display: flex; min-height: 100vh; }
+    body { font-family: "Segoe UI", Arial, sans-serif; background: #111; color: #eee; }
 
-    /* Sidebar */
-    .sidebar {
-      width: 250px;
-      background: #002b5c;
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+    /* Header */
+    header {
+      background: #d00000;
       color: #fff;
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
+      padding: 20px 0;
+      position: sticky; top: 0; z-index: 1000;
     }
-    .sidebar img {
-      width: 80px; height: auto; border-radius: 8px; margin-bottom: 20px;
-    }
-    .sidebar h1 {
-      font-size: 20px; margin-bottom: 30px;
-    }
-    .sidebar nav ul {
-      list-style: none; display: flex; flex-direction: column; gap: 15px;
-    }
-    .sidebar nav a {
-      color: #fff; text-decoration: none; font-weight: 500;
-    }
-    .sidebar nav a:hover { text-decoration: underline; }
-
-    /* Main content */
-    .main {
-      flex: 1;
-      background: #f5f7fa;
-      padding: 40px;
-    }
-    section { margin-bottom: 60px; }
-    section h2 { color: #002b5c; margin-bottom: 20px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; }
+    header h1 { font-size: 24px; text-transform: uppercase; letter-spacing: 2px; }
+    nav ul { list-style: none; display: flex; gap: 20px; }
+    nav a { color: #fff; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
 
     /* Hero */
     .hero {
-      background: url('buzzin.jpg') no-repeat center center/cover;
-      color: #fff; padding: 80px 20px; border-radius: 8px;
-      text-align: center; margin-bottom: 40px;
+      background: url('images/consulting-hero.jpg') no-repeat center center/cover;
+      text-align: center; color: #fff;
+      padding: 120px 20px;
     }
-    .hero h2 { font-size: 36px; margin-bottom: 20px; }
-    .hero p { font-size: 18px; max-width: 600px; margin: 0 auto; }
+    .hero h2 { font-size: 48px; margin-bottom: 20px; text-transform: uppercase; }
+    .hero p { font-size: 20px; max-width: 700px; margin: 0 auto 30px; }
+    .hero .btn {
+      background: #ffcc00; color: #111; padding: 12px 24px;
+      border-radius: 6px; text-decoration: none; font-weight: bold;
+    }
+    .hero .btn:hover { background: #e6b800; }
 
-    /* Services grid */
-    .grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+    /* Sections */
+    section { padding: 60px 20px; }
+    section h2 { text-align: center; margin-bottom: 40px; font-size: 32px; color: #ffcc00; }
+
+    /* Services */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
     .card {
-      background: #fff; padding: 20px; border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      background: #222; padding: 20px; border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
     }
-    .card h3 { color: #ff6600; margin-bottom: 10px; }
+    .card h3 { margin-bottom: 10px; color: #d00000; }
 
-    /* Contact form */
-    form { display: grid; gap: 15px; max-width: 500px; }
+    /* About */
+    .about { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
+    .about img { max-width: 400px; border-radius: 8px; }
+    .about p { flex: 1; }
+
+    /* Contact */
+    form { max-width: 600px; margin: 0 auto; display: grid; gap: 15px; }
     input, textarea {
-      padding: 12px; border: 1px solid #ccc; border-radius: 6px;
+      padding: 12px; border: 1px solid #555; border-radius: 6px; background: #111; color: #eee;
     }
     button {
-      background: #002b5c; color: #fff; padding: 12px;
+      background: #d00000; color: #fff; padding: 12px;
       border: none; border-radius: 6px; cursor: pointer;
     }
-    button:hover { background: #004080; }
+    button:hover { background: #a00000; }
 
     /* Footer */
-    footer { text-align: center; color: #777; margin-top: 40px; }
+    footer { background: #000; color: #777; text-align: center; padding: 20px; margin-top: 40px; }
   </style>
 </head>
 <body>
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <img src="buzzin.jpg" alt="Company Logo">
-    <h1>Company Name</h1>
-    <nav>
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </aside>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Motorsport Consulting Co.</h1>
+      <nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <!-- Main content -->
-  <div class="main">
-    <!-- Hero -->
-    <section id="hero" class="hero">
-      <h2>Professional Solutions for Modern Business</h2>
-      <p>We help companies innovate, streamline, and grow with tailored strategies and technology.</p>
-    </section>
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Accelerating Motorsport Success</h2>
+    <p>Expert consulting in race engineering, vehicle development, and strategic performance management.</p>
+    <a href="#contact" class="btn">Consult With Us</a>
+  </section>
 
-    <!-- Services -->
-    <section id="services">
-      <h2>Our Services</h2>
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <h2>Our Consulting Services</h2>
       <div class="grid">
         <div class="card">
-          <h3>Consulting</h3>
-          <p>Expert advice to optimize operations and strategy.</p>
+          <h3>Race Strategy</h3>
+          <p>Data-driven race planning, pit stop optimization, and performance analysis.</p>
         </div>
         <div class="card">
-          <h3>Development</h3>
-          <p>Custom software and cloud solutions built for your needs.</p>
+          <h3>Engineering Advisory</h3>
+          <p>Vehicle setup, simulation, and technical consulting for competitive advantage.</p>
         </div>
         <div class="card">
-          <h3>Support</h3>
-          <p>Reliable ongoing support to keep your systems running smoothly.</p>
+          <h3>Business Consulting</h3>
+          <p>Guidance for sponsors, partnerships, and motorsport business development.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- About -->
-    <section id="about">
-      <h2>About Us</h2>
-      <p>We are a team of professionals with years of experience in engineering, cloud computing, and business solutions. Our mission is to deliver high-quality services that empower companies worldwide.</p>
-    </section>
+  <!-- About -->
+  <section id="about">
+    <div class="container about">
+      <img src="images/consulting-team.jpg" alt="Consulting Team">
+      <div>
+        <h2>About Us</h2>
+        <p>We are a team of motorsport professionals with decades of combined experience in engineering, racing, and consulting. Our mission is to help teams and organizations achieve peak performance both on and off the track.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact -->
-    <section id="contact">
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
       <h2>Contact Us</h2>
       <form>
         <input type="text" placeholder="Your Name" required>
@@ -132,12 +133,12 @@
         <textarea placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
       </form>
-    </section>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-      <p>© 2025 Company Name. All rights reserved.</p>
-    </footer>
-  </div>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Motorsport Consulting Co. All rights reserved.</p>
+  </footer>
 </body>
 </html>
